@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+  
+  <style>
+
+     @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    body, p, a, nav, ul {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'League Spartan', sans-serif;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      margin: 30px;
+      padding: 20px;
+      box-sizing: border-box;
+      font-family: 'League Spartan', sans-serif;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      background-color: #333;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+ 
+    .navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.2); 
+}
+    a {
+      text-decoration: none;
+      color: white;
+      text-transform: none;
+      transition: 0.25s ease;
+    }
+
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    ul li{
+      text-decoration: none;
+      margin: 0 0.75em 0 0.75em;
+    }
+
+    ul:hover a{
+      color: green;
+    }
+    ul:hover a:hover{
+      color: darkgreen;
+      box-shadow: 0 2px 0 0 currentColor;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar .menu a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+      gap: 50px;
+    }
+
+    .hero-content {
+      max-width: 500px;
+      text-align: left;
+      margin-right: 20px;
+      margin-left: 30px;
+      padding-top: 150px;
+      padding-left: 150px;
+    }
+    
+    .hero-content h1 {
+      font-size: 50px;
+      margin: 0.5rem 0;
+
+    }
+
+    .hero-content p:first-of-type {
+      font-size: 1.2rem;
+      margin-right: 350px;
+      text-align: left;
+      width: 100%;
+    }
+
+    .hero-content p:last-of-type {
+      font-size: 20px;
+      margin-bottom: 2rem;
+      padding: 10px;
+      margin-left: 50px;
+      color: #aaa;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin-bottom: 1.5rem;
+      padding-top: 15px;
+      
+    }
+
+    .social-links .icon img {
+      transition: transform 0.3s;
+      border: white solid 2px;
+    }
+    
+    .social-links .icon img:hover {
+      transform: scale(1.5);
+    }
+    
+
+    .side-image {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      margin-right: 200px;
+      margin-top: 95px;
+      object-fit: cover;
+      transition: transform 0.3s, box-shadow 0.3s;
+
+    }
+
+    .side-image:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .button-link {
+      display: inline-block;
+      padding: 20px 30px;
+      padding-top: 20px;
+      background-color: #333;
+      color: white;
+      font-size: 18px;
+      border:#000;
+      cursor: pointer;
+      text-align: center;
+      margin-left: 130px;
+      margin-top: 20px;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-link:hover {
+      background-color: #555;
+    }
+  
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+
+      .hero-content {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .side-image {
+        margin-bottom: 20px;
+        margin: 0;
+      }
+      .button-link {
+        margin: 0;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">CHIKIE</div>
+    <nav class="menu">
+      <ul>
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/about.html">About Me</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/contacts.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <p>Hi! It’s me</p>
+      <h1>Chicqui Mie Benitez</h1>
+      <p>I am an Information Technology student</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/chikie.benitez/" target="_blank" class="icon">
+          <img src="https://cdn-icons-png.freepik.com/256/11376/11376329.png?semt=ais_hybrid" alt="Facebook" width="50" height="50">
+        </a>
+        <a href="https://www.tiktok.com/@ngepon11?is_from_webapp=1&sender_device=pc" target="_blank" class="icon">
+          <img src="https://i.pinimg.com/736x/4b/89/4d/4b894de4d95836579928cfa8c5ca6de7.jpg" alt="TikTok" width="50" height="50">
+        </a>
+        <a href="https://instagram.com/your-profile" target="_blank" class="icon">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CIS-A2K_Instagram_Icon_%28Black%29.svg/2048px-CIS-A2K_Instagram_Icon_%28Black%29.svg.png" alt="Instagram" width="50" height="50">
+        </a>
+        <a href="mailto:benitezchicqui@gmail.com" target="_blank" class="icon">
+          <img src="https://cdn.vectorstock.com/i/1000v/20/60/email-icon-black-and-white-mail-vector-24922060.jpg" alt="Email" width="50" height="50">
+        </a>
+      </div>
+      <!-- More About Me Button -->
+      <a href="about.html" class="button-link">More About Me</a>
+    </div>
+    <img src="image/mypic.jpg" alt="Chicqui Mie Benitez" class="side-image">
+  </section>
+
+  
+
+</body>
+</html>

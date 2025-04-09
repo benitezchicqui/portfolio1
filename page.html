@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body, p, a, nav, ul {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'League Spartan', sans-serif;
+        }
+        body {
+            background-color: black;
+        }
+
+        .navbar {
+        display: flex;
+        justify-content: space-between;
+         align-items: center;
+         padding: 30px;
+         border-bottom-left-radius: 30px;
+         border-bottom-right-radius: 30px;
+         background-color: #333;
+         margin-left: 50px;
+         margin-right: 50px;
+         position: sticky;
+         top: 0;  
+         z-index: 1000; 
+        }
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar .logo:hover {
+            transform: scale(1.2); 
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            text-transform: none;
+            transition: 0.25s ease;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        ul li {
+            text-decoration: none;
+            margin: 0 0.75em 0 0.75em;
+        }
+
+        ul:hover a {
+            color: green;
+        }
+
+        ul:hover a:hover {
+            color: darkgreen;
+            box-shadow: 0 2px 0 0 currentColor;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar .menu a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .video-container video {
+            width: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">CHIKIE</div>
+        <nav class="menu">
+            <ul>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/about.html">About Me</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="video-container">
+        <h2>Shapes in C</h2>
+        <video controls autoplay>
+            <source src="video/work.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="video-container">
+        <h2>Count Up Display Circuit</h2>
+        <video controls autoplay>
+            <source src="video/circuit.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+</body>
+</html>

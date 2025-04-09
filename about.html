@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+  
+    <style>
+      body, p, a, nav, ul {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'League Spartan', sans-serif;
+    }
+
+
+    /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+         align-items: center;
+         padding: 30px;
+         border-bottom-left-radius: 30px;
+         border-bottom-right-radius: 30px;
+         background-color: #333;
+         margin-left: 50px;
+         margin-right: 50px;
+         position: sticky;
+         top: 0;  
+         z-index: 1000; 
+        }
+ 
+    .navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.2); 
+}
+    a {
+      text-decoration: none;
+      color: white;
+      text-transform: none;
+      transition: 0.25s ease;
+    }
+
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    ul li{
+      text-decoration: none;
+      margin: 0 0.75em 0 0.75em;
+    }
+
+    ul:hover a{
+      color: green;
+    }
+    ul:hover a:hover{
+      color: darkgreen;
+      box-shadow: 0 2px 0 0 currentColor;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar .menu a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        background-color: #f9f9f9;
+        opacity: 0;
+        animation: fadeIn 1.5s forwards 0.5s; 
+    }
+
+    .about-container {
+        display: flex;
+        max-width: 1000px;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .about-image img {
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+        margin-right: 200px;
+    }
+
+    .about-text {
+        max-width: 500px;
+    }
+
+    .about-text h1 {
+        font-size: 45px;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 700;
+        margin: 15px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+        line-height: 1.5;
+        font-family: 'DM Sans', sans-serif;
+        color: black;
+        text-align: justify;
+    }
+
+    .about-button {
+        display: inline-block;
+        align-items: center;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .about-button:hover {
+        background-color: gray;
+    }
+    /* Interests Section */
+    h2 {
+        font-weight: bold;
+        text-align: center;
+        font-size: 50px;
+        margin-top: 50px;
+    }
+
+    hr {
+        border: 0;
+        height: 1px;
+        background-color: black;
+    }
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100px);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+      .main-interests {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px; 
+        margin: 50px auto; 
+        max-width: 1000px;
+      }
+
+      .interest {
+        background-color: #333;
+        color: white;
+        padding: 30px 20px;
+        border-radius: 10px;
+        width: 250px;
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: fadeIn 2.5s;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .interest:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+.interest img {
+    width: 60px; 
+    height: 60px; 
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.interest:hover img {
+    transform: scale(1.2);
+}
+
+.interest img[src*="spotify"] {
+    width: 70px; 
+    height: 70px;
+}
+.interest img[src*="socialkings.online"] {
+    width: 90px;  
+    height: 80px; 
+    background: none; 
+    padding: 0;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.interest img[src*="cube.asia"] {
+    width: 50px; 
+    height: 70px;
+}
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100px);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .about-container {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .about-image img {
+            width: 250px;
+            margin-right: 0;
+        }
+
+        .about-text button {
+            margin-left: 0;
+            padding: 8px 12px;
+            align-items: center;
+            text-align: end;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .about-container {
+            padding: 20px;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .about-image img {
+            width: 200px;
+            margin-right: 0;
+        }
+
+        .about-text button {
+            margin-left: 0;
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+    }
+
+    .interest a {
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease;
+    }
+
+    .interest a:hover {
+        color: #1db954;
+    }
+
+    @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .skills-container {
+            text-align: center;
+            animation: slideIn 1s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    #skills {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+        }
+
+        #skills h2 {
+            font-size: 3rem;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .skills-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .skill {
+            background-color: white;
+            color: black;
+            padding: 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill:hover img {
+            transform: scale(1.2);
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background-color: #333;
+            border-radius: 10px;
+            width: 0%;
+            transition: width 1s ease;
+        }
+
+        .skill:hover .progress-bar {
+            width: 100%;
+        }
+        .section-heading {
+        text-align: center;
+        position: relative;
+        font-size: 2.5rem;
+        margin: 50px 0;
+      }
+
+      .section-heading::before,
+      .section-heading::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 40%;
+        height: 2px;
+        background-color: black;
+      }
+
+      .section-heading::before {
+        left: 0;
+      }
+
+      .section-heading::after {
+        right: 0;
+      }
+
+        @media (max-width: 1024px) {
+
+            .about-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .about-image img {
+                width: 250px;
+                margin-right: 0;
+            }
+
+            .about-text button {
+                margin-left: 0;
+                padding: 8px 12px;
+                align-items: center;
+                text-align: end;
+            }
+
+            .skills {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            .about-container {
+                padding: 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .about-image img {
+                width: 200px;
+                margin-right: 0;
+            }
+
+            .about-text button {
+                margin-left: 0;
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+        }
+  
+    .more-about-button, .back-to-menu-button {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        margin-top: 50px;
+    }
+
+    .more-about-button:hover, .back-to-menu-button:hover {
+        background-color: #333;
+    }
+
+    
+    .more-about-button, .back-to-menu-button {
+        margin-top: 50px;
+        text-align: center;
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">CHIKIE</div>
+    <nav class="menu">
+        <ul>
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/about.html">About Me</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="/contacts.html">Contacts</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- About Me Section -->
+<section id="about">
+<section class="about">
+    <div class="about-container">
+        <div class="about-image">
+            <img src="image/picture.jpg" alt="Profile Image">
+        </div>
+        <div class="about-text">
+            <h1>About Me</h1>
+            <p>
+                I am 19 years old and I'm turning 20 on May 8, 2005. I was born in Quezon City. I am a motivated and hardworking individual with a passion to do my work. Although I do not have prior work experience, I have gained some valuable knowledge and skills through my studies. I am confident in my ability to quickly learn and adapt to new tasks, and I am excited to apply my skills in the workplace and contribute to the success of the company. I have always been fascinated by computers and technology and i’m interested in gaining the skills and I believe that IT plays a crucial role in shaping society and the future, making it an exciting and rewarding field to be a part of. It has the endless opportunities for innovation and creativity that it offers.
+            </p>
+            <a href="#interestp" class="about-button">MORE ABOUT ME</a>
+        </div>
+    </div>
+</section>
+</section>
+
+<h2 class="section-heading">INTERESTS</h2>     
+<!-- Interests Section -->
+<section id="interestp">
+    <div class="main-interests">
+        <div class="interest">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg" alt="Netflix">
+            <a href="https://www.netflix.com" target="_blank">Watching Movies</a>
+        </div>
+        <div class="interest">
+            <img src="https://static.vecteezy.com/system/resources/previews/042/148/631/non_2x/spotify-logo-spotify-social-media-icon-free-png.png" alt="Spotify">
+            <a href="https://www.spotify.com" target="_blank">Playing Music</a>
+        </div>
+        <div class="interest">
+            <img src="https://i0.wp.com/socialkings.online/wp-content/uploads/2021/04/Artboard-1yt.png?fit=650%2C534&ssl=1" alt="YouTube">
+            <a href="https://www.youtube.com" target="_blank">YouTube</a>
+        </div>
+        <div class="interest">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam">
+            <a href="https://store.steampowered.com" target="_blank">Playing Online Games</a>
+        </div>
+        <div class="interest">
+            <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Mental Health">
+            <a href="https://www.mentalhealth.gov" target="_blank">Mental Health Matters</a>
+        </div>
+        <div class="interest">
+            <img src="https://i0.wp.com/cube.asia/wp-content/uploads/2024/09/1b10466faecfb9e8302243c229f31676.webp?fit=720%2C1024&ssl=1" alt="E-commerce">
+            <a href="https://www.shopee.ph" target="_blank">E-commerce</a>
+        </div>
+    </div>
+    
+</section>
+
+<!-- Skills Section -->
+
+<section id="skills">
+    <h2 class="section-heading">SKILLS</h2>
+    <div class="skills-container">
+        <div class="skills">
+            <div class="skill">
+                <img src="https://lh3.googleusercontent.com/-TkDrOYSrcZE/Z1d0e2jWyII/AAAAAAAAAso/2zDrEOPh8nsY7kf9t1zj8j6rHfN-TYHMwCNcBGAsYHQ/CIRCLE%2BLOGO%2B-%2BGRADIENT%2B-%2BRGB%2B%25284%2529.png" alt="Canva">
+                <p>Canva</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <img src="image/html.png" alt="HTML">
+                <p>HTML</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1200px-C_Programming_Language.svg.png" alt="C Language">
+                <p>C Language</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 70%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <img src="https://coryrylan.com/assets/images/posts/types/css.svg" alt="CSS">
+                <p>CSS</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <img src="image/capcut.png" alt="CapCut">
+                <p>CapCut</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 75%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <img src="image/utube.png" alt="YouTube">
+                <p>YouTube</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/11494/11494033.png" alt="Troubleshooting">
+                <p>Troubleshooting</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 75%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <img src="https://www.build-electronic-circuits.com/wp-content/uploads/2023/01/led-resistor-circuit-on-breadboard.png" alt="Circuits">
+                <p>Circuits</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 75%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#about" class="back-to-menu-button">BACK TO TOP</a>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        body, html {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+   
+        body, p, a, nav, ul {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'League Spartan', sans-serif;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            margin: 30px;
+            padding: 20px;
+            box-sizing: border-box;
+            font-family: 'League Spartan', sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+
+        .navbar {
+        display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 30px;
+         border-bottom-left-radius: 30px;
+         border-bottom-right-radius: 30px;
+         background-color: #333;
+         margin-left: 50px;
+         margin-right: 50px;
+         position: sticky;
+         top: 0;  
+         z-index: 1000; 
+     }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar .logo:hover {
+            transform: scale(1.2);
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            text-transform: none;
+            transition: 0.25s ease;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        ul li {
+            text-decoration: none;
+            margin: 0 0.75em 0 0.75em;
+        }
+
+        ul:hover a {
+            color: green;
+        }
+
+        ul:hover a:hover {
+            color: darkgreen;
+            box-shadow: 0 2px 0 0 currentColor;
+        }
+
+        .navbar .menu a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 50px 0;
+            flex: 1;
+            box-sizing: border-box;
+        }
+
+        .contact-left, .contact-right {
+            width: 45%;
+            box-sizing: border-box;
+        }
+
+        .contact-left h1 {
+            font-size: 4em;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-left p {
+            font-size: 20px;
+            line-height: 1.6;
+            text-align: justify;
+            font-family: 'DM Sans';
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .contact-info p {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .contact-info img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-info a:hover img {
+            transform: scale(1.5);
+        }
+
+        .contact-info a:hover {
+            color: gray;
+            text-decoration: underline;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 70px;
+            margin-top: 20px;
+            padding: 30px;
+            margin-left: 70px;
+        }
+
+        .social-links .icon img {
+            transition: transform 0.3s;
+            border: white solid 2px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .social-links .icon img:hover {
+            transform: scale(1.5);
+        }
+
+        .contact-right {
+            width: 45%;
+            padding-right: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 18px;
+            margin: 10px 0;
+            background: #333;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.1em;
+            font-family: 'League Spartan';
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        button {
+            background-color: #444;
+            color: white;
+            padding: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 25px;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 100%; 
+            box-sizing: border-box;
+        }
+        
+        button:hover {
+            background-color: #555;
+            transform: scale(1.05)
+    }
+
+      
+        footer {
+    background-color: #333; /* Change this color to any color you prefer */
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: auto; /* This ensures the footer stays at the bottom */
+}
+
+
+.footer-center p {
+    font-size: 20px;
+    color: white;
+}
+
+.footer-right p {
+    color: white;
+    font-size: 0.95rem;
+}
+
+        
+        /* Mobile and Tablet Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .contact-left, .contact-right {
+                width: 100%;
+                padding: 0 20px;
+            }
+
+            .contact-left h1 {
+                font-size: 4em;
+            }
+
+            .contact-info p {
+                font-size: 15px;
+            }
+
+            .contact-info a {
+                font-size: 18px;
+            }
+
+            .contact-info img {
+                width: 25px;
+                height: 25px;
+            }
+
+            .social-links {
+                gap: 20px;
+                padding: 10px;
+                margin: 0;
+                justify-content: center;
+            }
+
+            .social-links .icon img {
+                width: 50px;
+                height: 50px;
+            }
+
+            input, textarea {
+                padding: 18px;
+                font-size: 1em;
+            }
+
+            button {
+                padding: 15px;
+            }
+
+            .footer {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .footer-left h2 {
+                font-size: 1.25rem;
+            }
+
+            .footer-center p {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .navbar .logo {
+                font-size: 1.25rem;
+                margin-bottom: 10px;
+            }
+
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            ul li {
+                margin-bottom: 10px;
+            }
+
+            .container {
+                padding: 20px 0;
+            }
+
+            .contact-left h1 {
+                font-size: 1.8em;
+            }
+
+            .contact-left p {
+                font-size: 16px;
+            }
+
+            .footer-left h2 {
+                font-size: 1.1rem;
+            }
+
+            .footer-center p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">CHIKIE</div>
+        <nav class="menu">
+            <ul>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/about.html">About Me</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="contact-left">
+            <h1>CONTACT ME</h1>
+            <p>Thank you for visiting my portfolio website! If you have any questions, suggestions, or are interested in collaborating, please don’t hesitate to reach out using this form. I’ll do my best to respond to your message as quickly as possible.</p>
+
+            <div class="contact-info">
+                <p>
+                    <a href="tel:+639123456789">
+                        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone"> +63 912 345 6789
+                    </a>
+                </p>
+                <p>
+                    <a href="mailto:benitezchicqui@gmail.com">
+                        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"> benitezchicqui@gmail.com
+                    </a>
+                </p>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/chikie.benitez/" target="_blank" class="icon">
+                    <img src="https://cdn-icons-png.freepik.com/256/11376/11376329.png?semt=ais_hybrid" alt="Facebook">
+                </a>
+                <a href="https://www.tiktok.com/@ngepon11?is_from_webapp=1&sender_device=pc" target="_blank" class="icon">
+                    <img src="https://i.pinimg.com/736x/4b/89/4d/4b894de4d95836579928cfa8c5ca6de7.jpg" alt="TikTok">
+                </a>
+                <a href="https://instagram.com/your-profile" target="_blank" class="icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CIS-A2K_Instagram_Icon_%28Black%29.svg/2048px-CIS-A2K_Instagram_Icon_%28Black%29.svg.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-right">
+            <form>
+                <input type="text" placeholder="Enter your Name">
+                <input type="text" placeholder="Enter your contact number">
+                <textarea placeholder="Enter your suggestion"></textarea>
+                <textarea placeholder="Enter your message"></textarea>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">  
+        <div class="footer-center">
+            <p>Made with ❤️</p>
+        </div>
+        <div class="footer-right">
+            <p>Ilang-Ilang Street, Hillcrest Village, Caloocan City</p>
+        </div>
+    </footer>
+</body>
+</html>
